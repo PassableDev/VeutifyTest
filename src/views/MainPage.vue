@@ -47,7 +47,6 @@
                   </v-card>
                 </v-menu>
               </template>
-              
             </template>
           </v-calendar>
         </v-sheet>

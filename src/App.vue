@@ -1,8 +1,7 @@
 <template>
   <v-app>
-    
     <v-toolbar color="indigo darken-4" fixed dark app>
-      <v-toolbar-title id="appName">Workflowhub</v-toolbar-title>
+      <v-toolbar-title id="appName">Test</v-toolbar-title>
       <v-toolbar-items>
         <v-btn flat>Main Menu</v-btn>
         <v-btn flat>Requests</v-btn>
@@ -15,14 +14,10 @@
     <v-content>
       <MainPage></MainPage>
     </v-content>
-    
-      
-    
 
     <v-footer color="indigo darken-4" app>
       <span class="white--text">&copy; 2017</span>
     </v-footer>
-
   </v-app>
 </template>
 

@@ -1,5 +1,6 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
+const VuetifyLoaderPlugin = require('vuetify-loader/lib/plugin');
 const Webpack = require('webpack');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
@@ -8,8 +9,9 @@ module.exports = {
   module: {
     rules: [
       { test: /\.js$/, use: 'babel-loader' },
-      { test: /\.css$/, use: ['vue-style-loader', 'css-loader'] },
-      { test: /\.vue$/, use: 'vue-loader' }
+      { test: /\.css$/, use: ['vue-style-loader', 'css-loader'], exclude: /node_modules/ },
+      { test: /\.vue$/, use: 'vue-loader' },
+      { test: /\.styl$/, use: ['style-loader', 'css-loader', 'stylus-loader']}
     ]
   },
   resolve: {
@@ -28,6 +30,7 @@ module.exports = {
     }),
     new VueLoaderPlugin(),
     new Webpack.HotModuleReplacementPlugin(),
-    new BundleAnalyzerPlugin()
+    new BundleAnalyzerPlugin(),
+    new VuetifyLoaderPlugin()
   ]
 }
